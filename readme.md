@@ -105,25 +105,6 @@ async function getBots() {
 
 ---
 
-## Development
-
-```bash
-# Clone repository
-git clone https://github.com/matrax123/clientAPI.git
-cd clientAPI
-
-# Install dependencies
-npm install
-
-# Build TypeScript
-npm run build
-
-# Optionally, link package locally for testing
-npm link
-```
-
----
-
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request for bug fixes or new features.
