@@ -31,21 +31,26 @@ yarn add quickapi-ts-client
 ```ts
 import { createApiClient } from "quickapi-ts-client";
 
+// Create a client for your API
 const { apiGet, apiPost, apiPut, apiDelete } = createApiClient("http://localhost:2000");
 
 async function main() {
   try {
-    const bots = await apiGet("/bots");
-    console.log("All bots:", bots);
+    // Get all items
+    const items = await apiGet("/items");
+    console.log("All items:", items);
 
-    const created = await apiPost("/bots", { name: "My Bot" });
-    console.log("Created bot:", created);
+    // Create a new item
+    const createdItem = await apiPost("/items", { name: "New Item", price: 9.99 });
+    console.log("Created item:", createdItem);
 
-    const updated = await apiPut(`/bots/${created.id}`, { name: "Updated Bot" });
-    console.log("Updated bot:", updated);
+    // Update the created item
+    const updatedItem = await apiPut(`/items/${createdItem.id}`, { name: "Updated Item", price: 12.99 });
+    console.log("Updated item:", updatedItem);
 
-    const deleted = await apiDelete(`/bots/${created.id}`);
-    console.log("Deleted bot:", deleted);
+    // Delete the item
+    const deletedItem = await apiDelete(`/items/${createdItem.id}`);
+    console.log("Deleted item:", deletedItem);
 
   } catch (error) {
     console.error("Unexpected error:", error);
