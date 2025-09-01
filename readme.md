@@ -1,6 +1,6 @@
-# QuickAPI Client
+# quickapi-ts-client
 
-![npm](https://img.shields.io/npm/v/quickapi-client?color=blue) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quickapi-client) ![typescript](https://img.shields.io/badge/TypeScript-Yes-blue) ![License](https://img.shields.io/npm/l/quickapi-client)
+![npm](https://img.shields.io/npm/v/quickapi-ts-client?color=blue) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/quickapi-ts-client) ![typescript](https://img.shields.io/badge/TypeScript-Yes-blue) ![License](https://img.shields.io/npm/l/quickapi-ts-client)
 
 A simple **TypeScript API client** wrapper around Axios for making HTTP requests easily, with fully typed responses and centralized error handling.
 
@@ -19,9 +19,9 @@ A simple **TypeScript API client** wrapper around Axios for making HTTP requests
 ## Installation
 
 ```bash
-npm install quickapi-client
+npm install quickapi-ts-client
 # or
-yarn add quickapi-client
+yarn add quickapi-ts-client
 ```
 
 ---
@@ -29,7 +29,7 @@ yarn add quickapi-client
 ## Quick Start
 
 ```ts
-import { createApiClient } from "quickapi-client";
+import { createApiClient } from "quickapi-ts-client";
 
 const { apiGet, apiPost, apiPut, apiDelete } = createApiClient("http://localhost:2000");
 
